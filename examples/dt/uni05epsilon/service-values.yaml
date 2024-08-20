@@ -20,6 +20,7 @@ data:
     ceph:
       customServiceConfig: |
         [ceph]
+        backend_availability_zone=cell2
         volume_backend_name=ceph
         volume_driver=cinder.volume.drivers.rbd.RBDDriver
         rbd_ceph_conf=/etc/ceph/ceph.conf
@@ -33,6 +34,7 @@ data:
     nfs:
       customServiceConfig: |
         [nfs]
+        backend_availability_zone=cell2
         volume_backend_name=nfs
         volume_driver=cinder.volume.drivers.nfs.NfsDriver
         nfs_snapshot_support=true
@@ -45,6 +47,7 @@ data:
     ontap-iscsi:
       customServiceConfig: |
         [ontap]
+        backend_availability_zone=cell2
         volume_backend_name=ontap
         volume_driver=cinder.volume.drivers.netapp.common.NetAppDriver
         netapp_server_hostname=_replaced_
